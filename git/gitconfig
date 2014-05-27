@@ -125,3 +125,9 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	name = Valentin Zberea
+	email = valentin.zberea@gmail.com
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
