@@ -11,3 +11,6 @@ endif
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
+
+let g:flake8_max_complexity=10
+let g:flake8_max_line_length=99
