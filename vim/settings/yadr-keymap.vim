@@ -25,14 +25,6 @@ endfunction
 nnoremap 0 ^
 nnoremap ^ 0
 
-" ========================================
-" RSI Prevention - keyboard remaps
-" ========================================
-" Certain things we do every day as programmers stress
-" out our hands. For example, typing underscores and
-" dashes are very common, and in position that require
-" a lot of hand movement. Vim to the rescue
-"
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
 vmap ,# c#{<C-R>"}<ESC>
@@ -82,8 +74,6 @@ nnoremap ,. '.
 imap <C-a> <esc>wa
 
 " ==== NERD tree
-" Cmd-Shift-N for nerd tree
-nmap ,nn :NERDTreeToggle<CR>
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
 nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
 
@@ -91,11 +81,6 @@ nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
 " ,oq to open it back up (rare)
 nmap <silent> ,qc :cclose<CR>
 nmap <silent> ,qo :copen<CR>
-
-" Command-/ to toggle comments
-map ,cc :TComment<CR>
-imap ,cc <Esc>:TComment<CR>i
-
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
@@ -105,11 +90,12 @@ nnoremap <silent> ,x :bn<CR>
 " ==============================
 " Window/Tab/Split Manipulation
 " ==============================
-" Move between split windows by using the four directions H, L, I, N
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-l> <C-w>l
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-j> <C-w>j
+" Move between split windows by using the four directions H, L, K, J
+" NOTE: This has moved to vim/settings/vim-tmux-navigator.vim.
+" nnoremap <silent> <C-h> <C-w>h
+" nnoremap <silent> <C-l> <C-w>l
+" nnoremap <silent> <C-k> <C-w>k
+" nnoremap <silent> <C-j> <C-w>j
 
 " Make gf (go to file) create the file, if not existent
 nnoremap gf :e<cfile><CR>
@@ -124,12 +110,6 @@ map <silent> ,gz <C-w>o
 " this to vv and ss
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
-
-" Resize windows with arrow keys
-nnoremap <C-Up> <C-w>+
-nnoremap <C-Down> <C-w>-
-nnoremap <C-Left> <C-w><
-nnoremap <C-Right>  <C-w>>
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi
@@ -167,13 +147,6 @@ nnoremap ' `
 nnoremap ` '
 
 " ============================
-" Tabularize - alignment
-" ============================
-" Hit Cmd-Shift-A then type a character you want to align by
-nmap <C-A> :Tabularize /
-vmap <C-A> :Tabularize /
-
-" ============================
 " SplitJoin plugin
 " ============================
 nmap sj :SplitjoinSplit<cr>
@@ -181,9 +154,6 @@ nmap sk :SplitjoinJoin<cr>
 
 " Get the current highlight group. Useful for then remapping the color
 map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
-
-" Source current file Cmd-% (good for vim development)
-map <C-%> :so %<CR>
 
 " ,hp = html preview
 map <silent> ,hp :!open -a Safari %<CR><CR>
