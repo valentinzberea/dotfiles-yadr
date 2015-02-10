@@ -68,6 +68,8 @@ set expandtab
 filetype plugin on
 filetype indent on
 
+autocmd Filetype javascript,less setlocal ts=2 sts=2 sw=2
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
