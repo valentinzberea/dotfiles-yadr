@@ -68,7 +68,7 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-autocmd Filetype javascript,less,yaml setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript,less,ruby,yaml setlocal ts=2 sts=2 sw=2
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
