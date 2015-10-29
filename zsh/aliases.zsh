@@ -128,6 +128,7 @@ alias gsmu='git submodule update'
 alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
+alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 
 # Common shell functions
 alias less='less -r'
@@ -172,6 +173,11 @@ alias rdmr='rake db:migrate:redo'
 # Zeus
 alias zs='zeus server'
 alias zc='zeus console'
+alias zr='zeus rspec'
+alias zrc='zeus rails c'
+alias zrs='zeus rails s'
+alias zrdbm='zeus rake db:migrate'
+alias zrdbtp='zeus rake db:test:prepare'
 
 # Rspec
 alias rs='rspec spec'

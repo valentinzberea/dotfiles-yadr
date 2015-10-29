@@ -8,7 +8,6 @@ alias -g L="| less"
 alias -g N="| /dev/null"
 alias -g S='| sort'
 alias -g G='| grep' # now you can do: ls foo G something
-alias -g canary="/Users/valentinz/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security"
 
 # Functions
 #
@@ -16,4 +15,3 @@ alias -g canary="/Users/valentinz/Applications/Google\ Chrome\ Canary.app/Conten
 # usage: fn foo 
 # to find all files containing 'foo' in the name
 function fn() { ls **/*$1* }
-
